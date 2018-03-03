@@ -19,6 +19,7 @@
     <div class="row">
         <painel *ngFor="let foto of fotos" titulo="{{foto.titulo}}" class="col-md-2">
             <foto url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
+            <button (click)="apagar(foto)" class="btn btn-danger">Apagar foto</button>
         </painel>
     </div>
 
