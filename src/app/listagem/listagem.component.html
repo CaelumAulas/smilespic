@@ -5,9 +5,23 @@
 </header>
 <main class="container">
 
-    <foto *ngFor="let foto of fotos" url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
+    <div class="row mb-4">
+        <div class="col-sm-12">
+            <form class="input-group"> 
+                <span class="input-group-prepend">
+                    <a routerLink="/cadastro" class="btn btn-primary">Nova foto</a>
+                </span>
+                <input type="text" class="form-control">
+            </form>
+        </div>
+    </div>
 
-    
+    <div class="row">
+        <painel *ngFor="let foto of fotos" titulo="{{foto.titulo}}" class="col-md-2">
+            <foto url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
+        </painel>
+    </div>
+
     <!-- <foto titulo="Pug" url="https://pre00.deviantart.net/de17/th/pre/i/2014/212/0/1/triangle_pug__vector__by_hundredmelanie-d7s9u60.jpg"></foto>
     <foto titulo="Leão" url="https://pre00.deviantart.net/24e5/th/pre/i/2014/204/8/3/triangle_lion__vector__by_hundredmelanie-d7rzu51.jpg"></foto>
     <foto titulo="Lobo" url="https://pre00.deviantart.net/1712/th/pre/i/2014/204/2/d/triangle_wolf__vector__by_hundredmelanie-d7rz1a2.jpg"></foto> -->
