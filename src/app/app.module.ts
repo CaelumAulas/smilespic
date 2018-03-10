@@ -11,13 +11,15 @@ import { ListagemComponent } from './listagem/listagem.component';
 import { roteamento } from "./app.routes";
 import { FotoService } from "./servicos/foto.service";
 import { MensagemComponent } from './mensagem/mensagem.component';
+import { FiltroPorTitulo } from "./listagem/filtroPorTitulo.pipe";
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroComponent,
     ListagemComponent,
-    MensagemComponent
+    MensagemComponent,
+    FiltroPorTitulo
   ],
   imports: [
     BrowserModule,
