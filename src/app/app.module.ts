@@ -10,12 +10,14 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { ListagemComponent } from './listagem/listagem.component';
 import { roteamento } from "./app.routes";
 import { FotoService } from "./servicos/foto.service";
+import { MensagemComponent } from './mensagem/mensagem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroComponent,
-    ListagemComponent
+    ListagemComponent,
+    MensagemComponent
   ],
   imports: [
     BrowserModule,

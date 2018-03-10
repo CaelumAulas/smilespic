@@ -5,6 +5,14 @@
 </header>
 <main class="container">
 
+    <div class="row" *ngIf="mensagem">
+        <div class="col-sm-12">
+            <p class="alert alert-success" role="alert">
+                {{mensagem}}
+            </p>
+        </div>
+    </div>
+
     <div class="row mb-4">
         <div class="col-sm-12">
             <form class="input-group"> 
@@ -18,7 +26,7 @@
 
     <div class="row">
         <painel *ngFor="let foto of fotos" titulo="{{foto.titulo}}" class="col-md-2">
-            <foto url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
+            <a [routerLink]="['/cadastro', foto._id]"><foto url="{{foto.url}}" titulo="{{foto.titulo}}"></foto></a>
             <button (click)="apagar(foto)" class="btn btn-danger">Apagar foto</button>
         </painel>
     </div>

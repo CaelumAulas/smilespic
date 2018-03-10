@@ -2,6 +2,13 @@
     <h1>Cadastro de fotos</h1>
 </header>
 <main class="container">
+
+    <div class="row" *ngIf="mensagem.texto">
+        <div class="col-md-12">
+            <mensagem [texto]="mensagem.texto" [tipo]="mensagem.tipo"></mensagem>
+        </div>
+    </div>
+
     <div class="row">
         <form class="col-md-7" (ngSubmit)="salvar()">
             <div class="form-group">
@@ -24,7 +31,7 @@
             <button class="btn btn-primary">Salvar</button>
         </form>
         <aside class="col-md-5">
-            <painel titulo="{{foto.titulo}}">
+            <painel titulo="{{foto.titulo}}" *ngIf="foto.url">
                 <foto url="{{foto.url}}" titulo="{{foto.titulo}}"></foto>
             </painel>
         </aside>
