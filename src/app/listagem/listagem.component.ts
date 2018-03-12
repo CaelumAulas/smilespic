@@ -6,7 +6,7 @@ import { MensagemComponent } from '../mensagem/mensagem.component';
 @Component({
     selector: 'listagem',
     templateUrl: './listagem.component.html',
-    styles: [`img { width: 200px }`]
+    styles: [`img { width: 200px}`]
 })
 export class ListagemComponent implements OnInit {
     titulo = 'Smiles'

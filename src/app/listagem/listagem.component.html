@@ -25,7 +25,7 @@
     <div class="row">
         <painel *ngFor="let foto of fotos | filtroPorTitulo:inputBusca.value " titulo="{{foto.titulo}}" class="col-md-2">
             <a [routerLink]="['/cadastro', foto._id]"><foto url="{{foto.url}}" titulo="{{foto.titulo}}"></foto></a>
-            <button (click)="apagar(foto)" class="btn btn-danger">Apagar foto</button>
+            <botao (acao)="apagar(foto)" estilo="danger" confirmacao="true">Apagar foto</botao>
         </painel>
     </div>
 

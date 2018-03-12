@@ -12,6 +12,7 @@ import { roteamento } from "./app.routes";
 import { FotoService } from "./servicos/foto.service";
 import { MensagemComponent } from './mensagem/mensagem.component';
 import { FiltroPorTitulo } from "./listagem/filtroPorTitulo.pipe";
+import { BotaoComponent } from './botao/botao.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FiltroPorTitulo } from "./listagem/filtroPorTitulo.pipe";
     CadastroComponent,
     ListagemComponent,
     MensagemComponent,
-    FiltroPorTitulo
+    FiltroPorTitulo,
+    BotaoComponent
   ],
   imports: [
     BrowserModule,
